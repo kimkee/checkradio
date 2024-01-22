@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* reset css */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,
+dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, figcaption, figure, dialog,
+footer, header, hgroup, menu, main, nav, section{margin:0; padding:0; border:0;}
+article, aside, details, figcaption, figure, dialog,
+footer, header, hgroup, menu, main, nav, section{display:block;}
+html,body{}
+body{word-wrap:break-word; word-break:keep-all; color:#333333; line-height:1.6; -webkit-text-size-adjust:none;}
+html *{max-height:1000000px;} /* Android tablet bug fix */
+h1, h2, h3, h4, h5, h6{font-size:100%;font-weight: normal;}
+a{color:#333333; text-decoration: none;}
+a,button,input{-webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);}
+body,select,input,textarea,button{font-size: 13px;font-family: "NotoSansKR","Malgun Gothic", "맑은 고딕" , Helvetica, Arial, sans-serif,"Apple Gothic","NotoSans","돋음", "Dotum";vertical-align:middle;}
+ol,ul,li{list-style:none;}
+label{vertical-align:middle; display:inline-block;}
+legend,caption{width:0;height:0; visibility:hidden; font-size:0;line-height:0;}
+img{vertical-align:middle; border:none;}
+table{border-collapse:collapse; border-spacing:0;}
+address,em,i{font-style:normal; }
+*,::before,::after{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+*{outline-color: rgb(0 114 255 / 20%);}
+::-ms-clear{display: none; }
+
+
+:root {
+    --safe-top: calc( env(safe-area-inset-top)   );
+    --safe-bottom: calc( env(safe-area-inset-bottom)  );
+}
+
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear{display:none; width:0; height:0; }
+input[type=search]::-ms-reveal{display:none; width:0; height:0; }
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration{display: none; }
+/* clears the 'X' from Chrome */
+input[type="time"]::-webkit-clear-button { display: none; }
+input[type="time"]::-webkit-calendar-picker-indicator { display: none; }
+input[type=number]{-moz-appearance:textfield;}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+/* Firefox */
+input[type=number] { -moz-appearance: textfield; }
+
+
+
+.d-flex{display: flex;}
+/* checkbox */
+.radio-check{position:relative;display:inline-block;vertical-align:middle;line-height: 1.4;font-size: 14px;min-height: 24px;}
+.radio-check+.radio-check{margin-left:10px;}
+.radio-check::before{width: 24px;height: 24px; border: #dddddd solid 1px; border-radius: 4px; content:""; display: inline-block; position: absolute;left: 0px; top: 0px;}
+.radio-check>.tcx{display: inline-block;width: 0px;height: 0px;position: absolute;left: 11px;top: 11px;transform: rotate(-45deg);}
+.radio-check>.tcx::before,
+.radio-check>.tcx::after{background: #dddddd;position: absolute;content:"";display: block;}
+.radio-check>.tcx::before{width: 2px;height: 7px;left: -4px;top: -3px;border-radius: 2px 2px 0px 0px;}
+.radio-check>.tcx::after{width: 8px;height: 2px;left: -3px;top: 2px;border-radius: 0px 2px 2px 0px;}
+
+.radio-check>:empty::before {   margin-right: 0px;}
+.radio-check>.txt:empty{margin-left: 24px;}
+.radio-check>input{position:absolute;left:0px;top:0px;padding:0px;z-index: 10;margin: 0;width: 24px;height: 24px;display:inline-block;vertical-align:middle;opacity:0;}
+.radio-check>.txt::before{width: 24px;height: 24px;/* background: url(../img/common/form.png) no-repeat; */display:inline-block;vertical-align: -8px;background-size: 75px auto;margin-right: 5px;/* content:""; */}
+.radio-check>input:checked + .txt::before{background-position-y: -30px;}
+.radio-check>input:disabled + .txt::before{background-position-y: -60px;}
+.radio-check>input:checked:disabled + .txt::before{background-position-y: -90px;}
+.radio-check>.txt{display:inline-block;vertical-align: middle;margin-left: 32px;}
+
+
+
+
+
+
+
+
+
+
+@media (prefers-color-scheme: light) {
+    body{background-color: #ffffff;}
+    .txt{color: #222222;}
+}
+@media (prefers-color-scheme: dark) {
+    body{background-color: #ffffff;}
+    .txt{color: #222222;}
+}
