@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
 /* reset css */
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,
@@ -14,7 +14,7 @@ html *{max-height:1000000px;} /* Android tablet bug fix */
 h1, h2, h3, h4, h5, h6{font-size:100%;font-weight: normal;}
 a{color:#333333; text-decoration: none;}
 a,button,input{-webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);}
-body,select,input,textarea,button{font-size: 13px;font-family: "NotoSansKR","Malgun Gothic", "맑은 고딕" , Helvetica, Arial, sans-serif,"Apple Gothic","NotoSans","돋음", "Dotum";vertical-align:middle;}
+body,select,input,textarea,button{font-size: 13px;font-family: 'Roboto',"Noto Sans KR","NotoSansKR","Malgun Gothic", "맑은 고딕" , Helvetica, Arial, sans-serif,"Apple Gothic","NotoSans","돋음", "Dotum";vertical-align:middle;}
 ol,ul,li{list-style:none;}
 label{vertical-align:middle; display:inline-block;}
 legend,caption{width:0;height:0; visibility:hidden; font-size:0;line-height:0;}
@@ -25,31 +25,13 @@ address,em,i{font-style:normal; }
 *{outline-color: rgb(0 114 255 / 20%);}
 ::-ms-clear{display: none; }
 
-.hdt{font-size:16px;font-weight: 700;margin-bottom: 20px;}
+.hdt{font-size:16px;font-weight: 500;margin-bottom: 20px;}
 
 :root {
     --safe-top: calc( env(safe-area-inset-top)   );
     --safe-bottom: calc( env(safe-area-inset-bottom)  );
 }
 
-
-/* clears the 'X' from Internet Explorer */
-input[type=search]::-ms-clear{display:none; width:0; height:0; }
-input[type=search]::-ms-reveal{display:none; width:0; height:0; }
-/* clears the 'X' from Chrome */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration{display: none; }
-/* clears the 'X' from Chrome */
-input[type="time"]::-webkit-clear-button { display: none; }
-input[type="time"]::-webkit-calendar-picker-indicator { display: none; }
-input[type=number]{-moz-appearance:textfield;}
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-/* Firefox */
-input[type=number] { -moz-appearance: textfield; }
 
 
 
