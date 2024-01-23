@@ -70,7 +70,7 @@ address,em,i{font-style:normal; }
 body{background-color: #ffffff;}
 .txt{color: #222222;}
 
-.dark body{background-color: #111111;}
+.dark body{background-color: #1a1a1a;}
 .dark .txt{color: #dddddd;}
 
 @media (prefers-color-scheme: light) {
