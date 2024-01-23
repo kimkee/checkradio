@@ -13,6 +13,7 @@
 <body class="body" style="padding: 20px;">
 	
 	<h3 class="hdt">첵크박스,라디오버튼</h3>
+
 	<div class="d-flex">
 		<label class="radio-check"><input type="checkbox"><em class="txt">선택</em><i class="tcx"></i></label>
 		<label class="radio-check"><input type="checkbox" checked><em class="txt">선택</em><i class="tcx"></i></label>
@@ -26,6 +27,34 @@
 		<label class="radio-check round"><input type="radio" name="radio1"><em class="txt"></em><i class="tcx"></i></label>
 		<label class="radio-check round"><input type="radio" name="radio1" disabled><em class="txt">선택</em><i class="tcx"></i></label>
 	</div>
+
+	<button type="button" class="btn-tog-dark" onclick="toggleDarkMode()"></button>
+
+	<script>
+		const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
+		const html = document.documentElement;
+		const btnTog = document.querySelector('.btn-tog-dark');
+		function toggleDarkMode() {
+			if (html.classList.contains('dark')) {
+				setDarkMode(false);
+			} else {
+				setDarkMode(true);
+			}
+		}
+		function initDarkMode() {
+			if (darkMode.matches) {
+				setDarkMode(true);
+			} else {
+				setDarkMode(false);
+			}
+		}
+		function setDarkMode(opt){
+			opt ? html.classList.add('dark') : html.classList.remove('dark');
+			opt ? btnTog.textContent = '🌞' : btnTog.textContent = '🌛';
+		}
+		document.addEventListener('DOMContentLoaded', initDarkMode);
+		darkMode.addEventListener('change', initDarkMode);
+	</script>
 </body>
 
 </html>

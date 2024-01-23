@@ -51,10 +51,6 @@ address,em,i{font-style:normal; }
 .radio-check>input:disabled~.txt { opacity: 0.5; }
 .radio-check>input:checked:disabled~.tcx::before{}
 .radio-check.round>.tcx{ border-radius: 100%;}
-
-
-
-
 @keyframes check-ani {
     0%{
         background-color: transparent;
@@ -62,15 +58,22 @@ address,em,i{font-style:normal; }
     }
 }
 
+.btn-tog-dark{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: no-repeat;
+    border: none;
+    font-size: 30px;
+}
 
+body{background-color: #ffffff;}
+.txt{color: #222222;}
 
-
+.dark body{background-color: #111111;}
+.dark .txt{color: #dddddd;}
 
 @media (prefers-color-scheme: light) {
-    body{background-color: #ffffff;}
-    .txt{color: #222222;}
 }
 @media (prefers-color-scheme: dark) {
-    body{background-color: #111111;}
-    .txt{color: #dddddd;}
 }
