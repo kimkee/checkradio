@@ -28,32 +28,25 @@
 		<label class="radio-check round"><input type="radio" name="radio1" disabled><em class="txt">선택</em><i class="tcx"></i></label>
 	</div>
 
-	<button type="button" class="btn-tog-dark" onclick="toggleDarkMode()"></button>
+	<button type="button" class="btn-tog-dark" onclick="togDark()"></button>
 
 	<script>
 		const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
 		const html = document.documentElement;
 		const btnTog = document.querySelector('.btn-tog-dark');
-		function toggleDarkMode() {
-			if (html.classList.contains('dark')) {
-				setDarkMode(false);
-			} else {
-				setDarkMode(true);
-			}
+
+		const togDark = ()=> {
+			!html.classList.contains('dark') ? setDark(true) : setDark(false);
 		}
-		function initDarkMode() {
-			if (darkMode.matches) {
-				setDarkMode(true);
-			} else {
-				setDarkMode(false);
-			}
+		const initDark = ()=> {
+			darkMode.matches ? setDark(true) : setDark(false);
 		}
-		function setDarkMode(opt){
+		const setDark = (opt)=> {
 			opt ? html.classList.add('dark') : html.classList.remove('dark');
-			opt ? btnTog.textContent = '🌞' : btnTog.textContent = '🌛';
+			opt ? btnTog.textContent = '🌛' : btnTog.textContent = '🌞';
 		}
-		document.addEventListener('DOMContentLoaded', initDarkMode);
-		darkMode.addEventListener('change', initDarkMode);
+		document.addEventListener('DOMContentLoaded', initDark);
+		darkMode.addEventListener('change', initDark);
 	</script>
 </body>
 
