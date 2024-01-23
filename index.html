@@ -35,12 +35,8 @@
 		const html = document.documentElement;
 		const btnTog = document.querySelector('.btn-tog-dark');
 
-		const togDark = ()=> {
-			!html.classList.contains('dark') ? setDark(true) : setDark(false);
-		}
-		const initDark = ()=> {
-			darkMode.matches ? setDark(true) : setDark(false);
-		}
+		const togDark = ()=> setDark( !html.classList.contains('dark') );
+		const initDark = ()=> setDark( darkMode.matches );
 		const setDark = (opt)=> {
 			opt ? html.classList.add('dark') : html.classList.remove('dark');
 			opt ? btnTog.textContent = '🌛' : btnTog.textContent = '🌞';
