@@ -32,14 +32,14 @@
 
 	<script>
 		const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
-		const html = document.documentElement;
-		const btnTog = document.querySelector('.btn-tog-dark');
+		const htmlCls  = document.documentElement.classList;
+		const btnTogs  = document.querySelector('.btn-tog-dark');
 
-		const togDark = ()=> setDark( !html.classList.contains('dark') );
+		const togDark  = ()=> setDark( !htmlCls.contains('dark') );
 		const initDark = ()=> setDark( darkMode.matches );
-		const setDark = (opt)=> {
-			opt ? html.classList.add('dark') : html.classList.remove('dark');
-			opt ? btnTog.textContent = '🌛' : btnTog.textContent = '🌞';
+		const setDark  = (isDark)=> {
+			htmlCls.toggle('dark', isDark);
+			btnTogs.textContent = isDark ? '🌛' : '🌞';
 		}
 		document.addEventListener('DOMContentLoaded', initDark);
 		darkMode.addEventListener('change', initDark);

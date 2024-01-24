@@ -52,10 +52,7 @@ address,em,i{font-style:normal; }
 .radio-check>input:checked:disabled~.tcx::before{}
 .radio-check.round>.tcx{ border-radius: 100%;}
 @keyframes check-ani {
-    0%{
-        background-color: transparent;
-        width: 0;
-    }
+    0%{ background-color: transparent; width: 0; }
 }
 
 .btn-tog-dark{

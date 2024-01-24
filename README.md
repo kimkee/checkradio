@@ -8,15 +8,22 @@ kimkee.github.io/checkradio/
 <!-- Ckeckbox style -->
 <label class="radio-check">
     <input type="checkbox">
-    <em class="txt">선택</em>
+    <em class="txt">CheckBox</em>
     <i class="tcx"></i>
 </label>
 ```
 ```html
 <!-- Radiobutton style -->
-<label class="radio-check">
+<label class="radio-check round">
     <input type="radio">
-    <em class="txt">선택</em>
+    <em class="txt">RadioButton</em>
     <i class="tcx"></i>
 </label>
+```
+
+```css
+/* CSS Animation */
+@keyframes check-ani {
+    0%{ background-color: transparent; width: 0; }
+}
 ```
