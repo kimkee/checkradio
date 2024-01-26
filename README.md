@@ -1,8 +1,6 @@
-# checkradio
+# Radiobutton  Checkbox
 
-## Radiobutton  Checkbox
-
-kimkee.github.io/checkradio/
+https://kimkee.github.io/checkradio/
 
 ```html
 <!-- Ckeckbox style -->
