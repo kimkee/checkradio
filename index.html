@@ -11,41 +11,39 @@
 </head>
 
 <body class="body" style="padding: 20px;">
-	
-	<h3 class="hdt">첵크박스,라디오버튼</h3>
+    
+    <h3 class="hdt">첵크박스,라디오버튼</h3>
 
-	<div class="d-flex">
-		<label class="radio-check"><input type="checkbox"><em class="txt">선택</em><i class="tcx"></i></label>
-		<label class="radio-check"><input type="checkbox" checked><em class="txt">선택</em><i class="tcx"></i></label>
-		<label class="radio-check"><input type="checkbox" checked disabled><em class="txt"></em><i class="tcx"></i></label>
-		<label class="radio-check"><input type="checkbox" disabled><em class="txt">선택</em><i class="tcx"></i></label>
-	</div>
-	<p>&nbsp;</p>
-	<div class="d-flex">
-		<label class="radio-check round"><input type="radio" name="radio1"><em class="txt">선택</em><i class="tcx"></i></label>
-		<label class="radio-check round"><input type="radio" name="radio1"><em class="txt">선택</em><i class="tcx"></i></label>
-		<label class="radio-check round"><input type="radio" name="radio1"><em class="txt"></em><i class="tcx"></i></label>
-		<label class="radio-check round"><input type="radio" name="radio1" disabled><em class="txt">선택</em><i class="tcx"></i></label>
-	</div>
+    <div class="d-flex">
+        <label class="radio-check"><input type="checkbox"><em class="txt">선택</em><i class="tcx"></i></label>
+        <label class="radio-check"><input type="checkbox" checked><em class="txt">선택</em><i class="tcx"></i></label>
+        <label class="radio-check"><input type="checkbox" checked disabled><em class="txt"></em><i class="tcx"></i></label>
+        <label class="radio-check"><input type="checkbox" disabled><em class="txt">선택</em><i class="tcx"></i></label>
+    </div>
+    <p>&nbsp;</p>
+    <div class="d-flex">
+        <label class="radio-check round"><input type="radio" name="radio1"><em class="txt">선택</em><i class="tcx"></i></label>
+        <label class="radio-check round"><input type="radio" name="radio1"><em class="txt">선택</em><i class="tcx"></i></label>
+        <label class="radio-check round"><input type="radio" name="radio1"><em class="txt"></em><i class="tcx"></i></label>
+        <label class="radio-check round"><input type="radio" name="radio1" disabled><em class="txt">선택</em><i class="tcx"></i></label>
+    </div>
 
-	<button type="button" class="btn-tog-dark" onclick="togDark()"></button>
+    <button type="button" class="btn-tog-dark" onclick="togDark()"></button>
 
-	<script>
-		const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
-		const htmlCls  = document.documentElement.classList;
-		const btnTogs  = document.querySelector('.btn-tog-dark');
+    <script>
+        const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
+        const htmlCls  = document.documentElement.classList;
+        const btnTogs  = document.querySelector('.btn-tog-dark');
 
-		const togDark  = ()=> setDark( !htmlCls.contains('dark') );
-		const initDark = ()=> setDark( darkMode.matches );
-		const setDark  = (isDark)=> {
-			htmlCls.toggle('dark', isDark);
-			btnTogs.textContent = isDark ? '🌛' : '🌞';
-		}
-		document.addEventListener('DOMContentLoaded', initDark);
-		darkMode.addEventListener('change', initDark);
-	</script>
+        const togDark  = ()=> setDark( !htmlCls.contains('dark') );
+        const initDark = ()=> setDark( darkMode.matches );
+        const setDark  = (isDark)=> {
+            htmlCls.toggle('dark', isDark);
+            btnTogs.textContent = isDark ? '🌛' : '🌞';
+        }
+        document.addEventListener('DOMContentLoaded', initDark);
+        darkMode.addEventListener('change', initDark);
+    </script>
 </body>
 
 </html>
-
-
