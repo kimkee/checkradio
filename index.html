@@ -6,9 +6,13 @@
     <title>첵크박스,라디오버튼</title>
     <meta charset="utf-8">
     <link href="//kimkee.github.io/ui/static/img/common/favicon.ico" rel="shrtcut icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes, shrink-to-fit=no, viewport-fit=cover">
     <meta name="description" content="첵크박스,라디오버튼 CSS 꾸미기">
-    <link rel="stylesheet" href="./style.css?v=4">
+    <link rel="stylesheet" href="//kimkee.github.io/darkmode/darkmode.css">
+    <script src="//kimkee.github.io/darkmode/darkmode.js" defer></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" defer>
+    
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="body" style="padding: 20px;">
@@ -29,24 +33,15 @@
         <label class="radio-check round"><input type="radio" name="radio1" disabled><em class="txt">선택</em><i class="tcx"></i></label>
     </div>
 
-    <button type="button" class="btn-tog-dark" onclick="togDark()"></button>
+    <span data-ui="dark" class="check-dark btn-tog-dark">
+        <input type="checkbox">
+        <em></em>
+        <b><i class="d fa-solid fa-moon"></i><i class="l fa-solid fa-sun"></i></b>
+    </span>
 
     <footer class="footer"><h2><a href="https://github.com/kimkee/checkradio" target="_blank">https://github.com/kimkee/checkradio</a></h2></footer>
 
-    <script>
-        const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
-        const htmlCls  = document.documentElement.classList;
-        const btnTogs  = document.querySelector('.btn-tog-dark');
 
-        const togDark  = ()=> setDark( !htmlCls.contains('dark') );
-        const initDark = ()=> setDark( darkMode.matches );
-        const setDark  = (isDark)=> {
-            htmlCls.toggle('dark', isDark);
-            btnTogs.textContent = isDark ? '🌛' : '🌞';
-        }
-        document.addEventListener('DOMContentLoaded', initDark);
-        darkMode.addEventListener('change', initDark);
-    </script>
 </body>
 
 </html>

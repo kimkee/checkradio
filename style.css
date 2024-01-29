@@ -57,11 +57,10 @@ address,em,i{font-style:normal; }
 
 .btn-tog-dark{
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 20px;
+    top: 20px;
     background: no-repeat;
     border: none;
-    font-size: 30px;
 }
 
 body{background-color: #ffffff;}
