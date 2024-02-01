@@ -45,32 +45,30 @@ address,em,i{font-style:normal; }
 .radio-check>input:checked~.tcx::after{background-color: #ffffff;}
 .radio-check>input:checked~.tcx::before{ animation: check-ani  ease 0.2s backwards}
 .radio-check>input:checked~.tcx::after{ animation: check-ani 0.2s ease 0.2s backwards}
-.radio-check>input:checked~.tcx{ background: var(--check-color); border-color: var(--check-color); }
+.radio-check>input:checked~.tcx{background: var(--check-color);border-color: #669aff;}
 .radio-check>input:checked~.txt{font-weight: 500;}
 .radio-check>input:disabled~.tcx {/* opacity: 0.5; */background-color: #eee;}
 .radio-check>input:disabled~.txt { opacity: 0.5; }
-.radio-check>input:checked:disabled~.tcx{
-    background: #8aabebb0;
-    border-color: #8aabebb0;
-}
+.radio-check>input:checked:disabled~.tcx{ background: #8aabebb0; border-color: #8aabebb0; }
 .radio-check.round>.tcx{ border-radius: 100%;}
 @keyframes check-ani {
     0%{ background-color: transparent; width: 0; }
 }
 
-.btn-tog-dark{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    background: no-repeat;
-    border: none;
-}
+[data-ui="dark"]{ position: absolute; right: 20px; top: 20px; background: no-repeat; border: none; }
 
 body{background-color: #ffffff;}
 .txt{color: #222222;}
 
 .dark body{background-color: #1a1a1a;}
 .dark .txt{color: #dddddd;}
+.dark .radio-check>input~.tcx::before,
+.dark .radio-check>input~.tcx::after{background-color: #ebebeb;}
+.dark .radio-check>input:disabled~.tcx{border: #535353 solid 1px;background: #5d5d5d87;}
+.dark .radio-check>input:disabled~.tcx::before,
+.dark .radio-check>input:disabled~.tcx::after{background-color: #696969;}
+.dark .radio-check>input:checked:disabled~.tcx{ background: #669aff4f; border-color: #669aff4f; }
+
 
 @media (prefers-color-scheme: light) {
 }
