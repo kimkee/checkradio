@@ -29,7 +29,7 @@ address,em,i{font-style:normal; }
 
 .d-flex{display: flex;}
 /* checkbox */
-.radio-check{position:relative;display:inline-block;vertical-align:middle;line-height: 1.2;font-size: 14px;min-height: 24px;cursor: pointer;}
+.radio-check{position:relative;display:inline-block;vertical-align:middle;line-height: 1.2;font-size: 14px;min-height: 24px;min-width: 24px;cursor: pointer;}
 .radio-check{--check-color: #669aff}
 .radio-check+.radio-check{margin-left: 20px;cursor: pointer;}
 .radio-check>.txt{display: inline-flex;vertical-align: middle;line-height: 1.3;min-height: 24px;align-items: center;padding: 2px 0px 2px 32px;word-break: break-word;}
@@ -67,7 +67,7 @@ body{background-color: #ffffff;}
 .dark .radio-check>input:disabled~.tcx{border: #535353 solid 1px;background: #5d5d5d87;}
 .dark .radio-check>input:disabled~.tcx::before,
 .dark .radio-check>input:disabled~.tcx::after{background-color: #696969;}
-.dark .radio-check>input:checked:disabled~.tcx{ background: #669aff4f; border-color: #669aff4f; }
+.dark .radio-check>input:checked:disabled~.tcx{background: #669aff4f;border-color: #4d67994f;}
 
 
 @media (prefers-color-scheme: light) {
