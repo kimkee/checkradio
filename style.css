@@ -28,6 +28,12 @@ address,em,i{font-style:normal; }
 .hdt{font-size:16px;font-weight: 500;margin-bottom: 20px;color: #aaaaaa;}
 
 .d-flex{display: flex;}
+
+
+:root{
+    --body-bg{background-color: #ffffff;}
+}
+
 /* checkbox */
 .radio-check{position:relative;display:inline-block;vertical-align:middle;line-height: 1.2;font-size: 14px;min-height: 24px;min-width: 24px;cursor: pointer;}
 .radio-check{--check-color: #669aff}
@@ -57,7 +63,7 @@ address,em,i{font-style:normal; }
 
 [data-ui="dark"]{ position: absolute; right: 20px; top: 20px; background: no-repeat; border: none; }
 
-body{background-color: #ffffff;}
+body{background-color: var(--body-bg);}
 .txt{color: #222222;}
 
 .dark body{background-color: #1a1a1a;}
